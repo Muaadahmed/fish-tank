@@ -6,9 +6,15 @@ function randRange(min, max) {
 
 function randRangeInt(min, max) {
   if (max === undefined) {
+    console.log("min-inside-first-line", min);
     max = min;
+    console.log("max-inside", max);
     min = 0;
+    console.log("max-inside-after-min-change", max);
+    console.log("min-inside", min);
   }
+  console.log("min", min);
+  console.log("max", max);
   return Math.floor(randRange(min, max + 0.99999));
 }
 
